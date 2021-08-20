@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('https://wallpapercave.com/uwp/uwp565861.jpeg');
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#subtitle {
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+#subtitle span {
+  background: -webkit-linear-gradient(rgb(161, 161, 161), #8794a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

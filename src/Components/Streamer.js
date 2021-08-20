@@ -2,6 +2,9 @@ import styles from "./Streamer.module.css";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import React, { useRef } from "react";
+import {Button} from '@material-ui/core'
+
+ 
 
 const Streamer = (props) => {
   const webcamButtonRef = useRef();
@@ -177,10 +180,10 @@ console.log("servers", servers)
 
   return (
     <div>
-      <h2>1. Start your Webcam</h2>
+      <h1 id='subtitle'><span> Start Webcam</span></h1> 
       <div className={styles.videos}>
         <span>
-          <h3>Local Stream</h3>
+        <h1 id='subtitle'><span> Local Stream</span></h1>
           <video
             className={styles.webcamVideo}
             ref={webcamVideoRef}
@@ -189,7 +192,7 @@ console.log("servers", servers)
           ></video>
         </span>
         <span>
-          <h3>Remote Stream</h3>
+        <h1 id='subtitle'><span> Remote Stream</span></h1> 
           <video
             className={styles.webcamVideo}
             ref={remoteVideoRef}
@@ -199,27 +202,27 @@ console.log("servers", servers)
         </span>
       </div>
 
-      <button onClick={webCamHandler} ref={webcamButtonRef}>
+      <Button color="primary" variant= "contained"onClick={webCamHandler} ref={webcamButtonRef}>
         Start webcam
-      </button>
-      <h2>2. Create a new Call</h2>
-      <button onClick={callHandler} ref={callButtonRef}>
+      </Button>
+      <h1 id='subtitle'><span> Create a new Call</span></h1>
+      <Button color="primary" variant= "contained" onClick={callHandler} ref={callButtonRef}>
         Create Call (offer)
-      </button>
+      </Button>
 
-      <h2>3. Join a Call</h2>
+      <h1 id='subtitle'><span> Join a call</span></h1>
       <p>Answer the call from a different browser window or device</p>
 
       <input ref={callInputRef} />
-      <button onClick={answerHandler} ref={answerButtonRef}>
+      <Button color="primary" variant= "contained" onClick={answerHandler} ref={answerButtonRef}>
         Answer
-      </button>
+      </Button>
 
-      <h2>4. Hangup</h2>
+      <h1 id='subtitle'><span> Hangup</span></h1>
 
-      <button onClick={hangupHandler} ref={hangupButtonRef}>
+      <Button color="primary" variant= "contained" onClick={hangupHandler} ref={hangupButtonRef}>
         Hangup
-      </button>
+      </Button>
       <a ref={videoDownloadRef} href={videoUrl}>
         Download session video
       </a>
